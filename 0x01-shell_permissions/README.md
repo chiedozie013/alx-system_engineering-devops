@@ -10,3 +10,4 @@
 (9-John_Doe) a script that sets the mode of the file hello to -rwxr-x-wx.
 (10-mirror_permissions) a script that sets the mode of the file hello the same as olleh's mode.
 (11-directories_permissions) a script that adds executive permission to all subdirectories of the current directory for the owner, the group owner and all the other users. Regular files should not be changed.
+(12-directory_permissions) a script that creates a directory called my_dir with permissions 751 in the working directory.
