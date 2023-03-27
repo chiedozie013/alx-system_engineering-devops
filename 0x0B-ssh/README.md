@@ -32,3 +32,14 @@ Requirements:
 
 Your SSH client configuration must be configured to use the private key ~/.ssh/school
 Your SSH client configuration must be configured to refuse to authenticate using a password
+
+to  created my ssh key:
+1. Run the line "ip a" on your Ubuntu terminal to get your ip address.
+2. Then run the line "ssh-keygen -t RSA -b 4096"
+3. Click enter to use their default path to store the key
+4. Set a password or click enter to leave it without a password
+5. Copy the ssh  to your agent: run the line ssh-copy-id username@ip_address.
+Username is the name of your Ubuntu terminal. When you open your terminal, the name on top of the terminal (without the @ that follows) is your username
+IP address= you generated it at step 1.
+6. Run the line: ssh username@ip_address
+7. cd .ssh, ls , vi id_rsa.pub then copy the content and paste in your intranet profile for ssh key
