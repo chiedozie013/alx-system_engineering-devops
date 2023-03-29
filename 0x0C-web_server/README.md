@@ -39,6 +39,14 @@ configure your DNS records with an A entry so that your root domain points to yo
 go to your profile and enter your domain in the Project website url field
 Example:
 
+STEPS
+
+create domain name from .TECH Domains using the coupon form ALX for free
+
+Go to the site where you got the domain name from, go to manage orders, then list of orders and click on your domain name and go to DNS Management then click on manage then add A record under A enter your ip address from the intranet and save, give like a few mins to hr to propagate then check your code
+
+
+
 File 3 - Readme:
 
 Replace a line with multiple lines with sed
