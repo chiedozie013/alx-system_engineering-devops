@@ -26,6 +26,10 @@ File 3 - Now that you have successfully connected to your server, we would also 
 
 Add the SSH public key below to your server so that we can connect using the ubuntu user.
 
+PROCEDURE
+
+log into your server, using the ssh Ubuntu@yourserverip, then in the server terminal, type vi ~/.ssh/authorized_keys, enter insert mode then copy the key in the intranet  and paste it down below on a new line, the :wq to save then check your code on the intranet.
+
 File 4 - Let’s practice using Puppet to make changes to our configuration file. Just as in the previous configuration file task, we’d like you to set up your client SSH configuration file so that you can connect to a server without typing a password.
 
 Requirements:
