@@ -5,18 +5,43 @@ Make sure that task #3 of your SSH project is completed for web-01 and web-02. T
 Please make sure you have your README.md pushed to GitHub.
 Example:
 
-File 1 - In order for us to verify that your servers are properly configured, we need you to create a user and password for both MySQL databases which will allow the checker access to them.
+Steps to take
+sudo apt-key add signature.key
+
+sudo sh -c 'echo "deb http://repo.mysql.com/apt/ubuntu bionic mysql-5.7" >> /etc/apt/sources.list.d/mysql.list'
+
+sudo apt-get update
+
+sudo apt install -f mysql-client=5.7* mysql-community-server=5.7* mysql-server=5.7*
+
+*File 1 - In order for us to verify that your servers are properly configured, we need you to create a user and password for both MySQL databases which will allow the checker access to them.
 
 Create a MySQL user named holberton_user on both web-01 and web-02 with the host name set to localhost and the password projectcorrection280hbtn. This will allow us to access the replication status on both servers.
 Make sure that holberton_user has permission to check the primary/replica status of your databases.
 In addition to that, make sure that task #3 of your SSH project is completed for web-01 and web-02. You will likely need to add the public key to web-02 as you only added it to web-01 for this project. The checker will connect to your servers to check MySQL status
 Example:
 
+STEPS
+
+go into sqy mode with sudo mysql -u root -p and enter password generated from installation of sql in task 0 above
+
+to create user run CREATE USER 'host name'@'localhost' IDENTIFIED BY 'host_password';
+
+then run GRANT REPLICATION CLIENT ON *.* TO 'host name'@'localhost';
+
 File 2 - In order for you to set up replication, you’ll need to have a database with at least one table and one row in your primary MySQL server (web-01) to replicate from.
 
 Create a database named tyrell_corp.
 Within the tyrell_corp database create a table named nexus6 and add at least one entry to it.
 Make sure that holberton_user has SELECT permissions on your table so that we can check that the table exists and is not empty.
+
+
+STEPS 
+
+create database with this command CREATE DATABASE database name
+
+use database created with USE database name
+then create tables and entry to it.
 
 File 3 - Before you get started with your primary-replica synchronization, you need one more thing in place. On your primary MySQL server (web-01), create a new user for the replica server.
 
